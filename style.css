@@ -1,0 +1,698 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;   
+    overflow-x: hidden;
+}
+
+body{
+    --primaryColor: #fc8080;
+    --secondarColor: #fda8a8 ;
+    --basicFontColor: #181818;
+    --paragraphColor:#f9c5c5;
+    --whiteColor:rgb(248, 193, 193);
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3{
+    color: var(--basicFontColor);
+}
+
+p{
+    color: var(--paragraphColor);
+}
+
+a{
+    color:var(--basicFontColor) ;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* <<<<<<<<<<<<<<<<<< common button >>>>>>>>>>>>>>>>>>>> */
+
+.span-btn{
+    font-size:2.3rem;
+    padding: 1.9rem 4rem;
+    border-radius: 0;
+    border: 3px solid var(--primaryColor);
+    background: transparent;
+    font-weight: bolder;
+    position: relative;
+    left: 0px;
+    /* margin-bottom: 20px; */
+    /* z-index: 3; */
+}
+
+.span-btn::before{
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primaryColor);
+    left: 0px;
+    top: 0;
+    z-index: -1;
+    transition: 0.6s ease;
+}
+
+.span-btn:hover::before{
+    width: 100%;
+}
+
+
+/* ><<<<<<<<<<<<<<<<<<<<<<<<<<<<<< common button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* ><<<<<<<<<<<<<<<<<<<<<<<<<<<<<< common box and line >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+.span-box{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primaryColor);
+    margin: 1rem 0rem;
+    margin-top: 3rem;
+}
+.span-line-big{
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: var(--primaryColor);
+    margin-bottom:3px;
+}
+.span-line-small{
+    display: block;
+    height: 3px;
+    width: 35px;
+    background-color: var(--secondarColor);
+}
+/* ><<<<<<<<<<<<<<<<<<<<<<<<<<<<<< common box and line >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  hero section with navbar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.heroSection{
+    background-image: url("images/background.png");
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -99;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+    align-items: center;
+}
+
+.navbar .logo img{
+    height: 10rem;
+    width: 17rem;
+}
+
+.nav-cnt{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 20vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-color: var(--primaryColor);
+    color: white;
+    font-size: 17px;  
+    transform: translateX(100%);   
+    transition:0.7s ease-in-out; 
+    z-index: 1;
+}
+
+.active-navbar{
+    transition:0.7s ease-in-out;
+    transform: translateX(0%); 
+}
+
+.nav-cnt li a{
+    color: var(--whiteColor);
+}
+.nav-btn{
+    padding: 10px;
+    background-color: var(--primaryColor);
+    border: none;
+    border-radius: 3px;
+    z-index: 999;
+    position: fixed;
+    right: 40px;
+}
+
+.bar1{
+    background-color: var(--whiteColor);
+    height: 0.4rem;
+    width: 25px;
+    border-radius: 20%;
+    margin-bottom: 3px; 
+    transition: 1s ease;  
+}
+.bar2{
+    background-color: var(--whiteColor);
+    height: 0.4rem;
+    width: 15px;
+    border-radius: 20%;
+    margin-bottom: 3px;
+    transition: 1s ease;    
+}
+.bar3{
+    background-color: var(--whiteColor);
+    height: 0.4rem;
+    width: 25px;
+    border-radius: 20%;
+    transition: 1s ease;
+}
+.bar1toggle{
+    transform: translateY(3.4px) rotate(45deg);
+    transition: 0.5s linear;
+}
+.bar2toggle{
+    display: none;
+}
+.bar3toggle{
+    transform: translateY(-1.8px) rotate(-45deg);
+    transition: 0.5s linear;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< hero contents>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.heroSection .hero{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 50%;
+    margin-top: 20rem;
+    margin-left:15rem ;
+}
+.heroSection .hero h1{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.heroSection .hero p{
+    font-size: 2.2rem;
+    color: var(--headingColor);
+    font-weight: 200;
+    margin-bottom: 3rem;
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< sidebar social >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+
+.side-bar-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: transparent;
+}
+
+.side-bar-social img{
+    margin-bottom: 3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< sidebar social  ended>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< about section statred >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+.about-section{
+    display: flex;
+    margin-right: 10rem;
+}
+
+.about-section .about-image{
+    background: url(images/about.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 100vh;
+
+}
+
+.about-section .about-text{
+    width: 50vw;
+    height: 100vh;
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+}
+
+.about-section .about-text h1{
+    font-size: 6rem;
+}
+.about-section .about-text p{
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+}
+.about-section .about-text .about-section-quote{
+    font-size: 4rem;
+    font-style: italic;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.about-section .about-text .about-section-quote span{
+    font-size: 2.4rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< about section ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section three started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+.section-three{
+    margin-left: 15rem;
+    margin-top: 30rem;
+}
+.section-three-boxes{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15rem;
+}
+
+.section-three-boxes .cards{
+    width: 40rem;
+    text-align: center;
+}
+.section-three-boxes .cards img{
+    text-align: center;
+}
+.section-three-boxes .cards h2{
+    font-size: 2rem;
+    text-align: center;
+}
+.section-three-boxes .cards p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.section-three-button{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+}
+.section-three-button div{
+    margin-right: 2rem;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section three ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section four started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+.section-four{
+    display: flex;
+    margin-right: 10rem;
+    margin-top: -4rem;
+    margin-bottom: -20rem;
+}
+.section-four-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+    margin-left: 15rem;
+}
+
+.section-four-text h1{
+    font-size: 6rem;
+    width: 40%;
+}
+.section-four-text p{
+    text-align: left;
+    font-size: 2rem;
+    width: 40%;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+}
+.section-four-image{
+    background: url("images/course.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain    ;
+    width: 50vw;
+    height: 100vh;  
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section four ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section five started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+.offer-section{
+    display: flex;
+    margin-right: 10rem;
+}
+
+.offer-section .offer-image{
+    background: url(images/offer.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50vw;
+    height: 100vh;
+
+}
+
+.offer-section .offer-text{
+    width: 50vw;
+    height: 100vh;
+    margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+}
+
+.offer-section .offer-text h1{
+    font-size: 6rem;
+}
+.offer-section .offer-text p{
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+    text-align: right;
+    width: 60%;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section five ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section six started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+.contact{
+    display: flex;
+    margin: 0 15rem;
+}
+
+.contact .contact-form-box{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.contact .contact-form-box h2{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.contact .contact-form-box form{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.contact .contact-form-box form input {
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--paragraphColor);
+    padding: 2.5rem 1rem ;
+    margin-bottom: 1.7rem;
+}
+
+.contact .contact-form-box form div{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.contact .contact-form-box form div div:first-child{
+    margin-right: 2rem;
+}
+
+.contact .contact-image{
+    background: url(images/contact.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50vw;
+    height: 80vh;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< section six ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< footer started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+.footer{
+    border-top: 4px solid var(--secondarColor);
+    padding: 5rem 0rem;
+    margin: 0 15rem;
+    display: flex;
+    gap: 15rem;
+    justify-content: flex-start;
+
+}
+
+.footer .footer-cards h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+.footer .footer-cards p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<< footer ended >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< making responsive website >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+@media screen and (max-width:900px){
+
+    .heroSection{
+        background-image: none;
+    }
+    .nav-btn{
+        right: 20px;
+        top: 50px;
+    }
+    .nav-cnt{ 
+        width: 50vw;
+    }
+    .heroSection .hero{
+        width: 70%;
+        height: 50%;
+        margin-left:8rem ;
+        margin-top: 10rem;
+    }
+    .heroSection .hero h1{
+        font-size: 3.8rem;
+    }
+     .heroSection .hero p{
+        font-size: 1.7rem;
+    }
+    .span-btn{
+        font-size:2.3rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .side-bar-social{
+        width: 7.5vw;
+    }
+    .side-bar-social img{
+        margin-bottom: 2rem;
+        height: 2.9rem;
+        width: 2.9rem;
+    }
+
+    .about-section{
+        display: block;
+        margin-right: 1rem;
+        margin-top: -80rem;
+    }
+    .about-section .about-image{
+        background-size: contain;
+        width: 100vw;
+
+    }
+    .about-section .about-text{
+        margin-top: -50rem;
+        width: 80vw;
+        margin-left: 6rem;
+    }
+    .about-section .about-text h1{
+        font-size: 7rem;
+    }
+    .about-section .about-text p{
+        font-size: 1.8rem;
+    }
+    .about-section .about-text .about-section-quote{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .about-section .about-text .about-section-quote span{
+        font-size: 1.4rem;
+    }
+
+    .section-three{
+        margin-left: 0rem;
+        margin-top: -20rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-three-boxes{
+        display: inline-block;
+        margin:auto;
+    }
+    
+    .section-three-boxes .cards{
+        width: 40rem;
+        text-align: center;
+    }
+
+    .section-three-button{
+        display: flex;
+        justify-content: center;
+    }
+    .section-three-button div{
+        margin-top: 3rem;
+        margin-right: 1rem;
+    }
+    .section-three-button div:nth-child(2){
+        margin-top: 3.5rem;
+    }
+    .section-four{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20rem;
+    }
+    .section-four-text{
+        width: 100vw;
+        margin-left: 7rem;
+    }
+    
+    .section-four-text h1{
+        font-size: 4.5rem;
+        width: 80%;
+    }
+    .section-four-text p{
+        text-align: left;
+        font-size: 2rem;
+        width: 80%;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+    }
+    .section-four-image{
+        margin-top: -35rem;
+        width: 100vw;
+    }
+    
+    .offer-section{
+        flex-direction: column;
+        margin-top: -80rem;
+        margin-right: 0rem;
+    }
+    .offer-section .offer-image{
+        width: 100vw;
+    }
+
+    .offer-section .offer-text{
+        width: 90vw;
+        margin-top: -60rem;
+    }
+    
+    .offer-section .offer-text h1{
+        font-size: 4.3rem;
+    }
+    .offer-section .offer-text p{
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+        text-align: right;
+        width: 80%;
+    }
+    .contact{
+        flex-direction: column;
+        margin: 0 6rem;
+        margin-top: -40rem;
+    }
+    
+    .contact .contact-form-box{
+        width: 90vw;
+    }
+    
+    .contact .contact-form-box form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .contact .contact-form-box form input {
+        width: 100%;
+        font-size: 2.5rem;
+        color: var(--paragraphColor);
+        padding: 1.5rem 1rem ;
+        margin-bottom: 1.7rem;
+    }
+    
+    .contact .contact-form-box form div{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+    
+    .contact .contact-form-box form div div:first-child{
+        margin-right: 2rem;
+    }
+    
+    .contact .contact-image{
+        width: 80vw;
+        margin-top: -40rem;
+    }
+
+    .footer{
+        margin: 0 6rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 10rem;
+        margin-top: -20rem;
+    }
+    
+    .footer .footer-cards h2{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+}
