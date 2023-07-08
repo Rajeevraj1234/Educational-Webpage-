@@ -696,3 +696,228 @@ li{
         margin-bottom: 2rem;
     }
 }
+
+
+@media screen and (max-width:300px){
+
+    .heroSection{
+        background-image: none;
+    }
+    .nav-btn{
+        right: 20px;
+        top: 50px;
+    }
+    .nav-cnt{ 
+        width: 50vw;
+    }
+    .heroSection .hero{
+        width: 70%;
+        height: 50%;
+        margin-left:8rem ;
+        margin-top:5rem;
+    }
+    .heroSection .hero h1{
+        font-size: 2.4rem;
+    }
+     .heroSection .hero p{
+        font-size: 1.3rem;
+    }
+    .span-btn{
+        font-size:1.1rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .side-bar-social{
+        width: 7.5vw;
+    }
+    .side-bar-social img{
+        margin-bottom: 2rem;
+        height: 2.9rem;
+        width: 2.9rem;
+    }
+
+    .about-section{
+        display: block;
+        margin-right: 1rem;
+        margin-top: -50rem;
+    }
+    .about-section .about-image{
+        background-size: contain;
+        width: 100vw;
+
+    }
+    .about-section .about-text{
+        margin-top: -20rem;
+        width: 80vw;
+        margin-left: 6rem;
+    }
+    .about-section .about-text h1{
+        font-size: 5rem;
+    }
+    .about-section .about-text p{
+        font-size: 1.2rem;
+    }
+    .about-section .about-text .about-section-quote{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    .about-section .about-text .about-section-quote span{
+        font-size: 1.2rem;
+    }
+
+    .section-three{
+        margin-left: 0rem;
+        margin-top: -10rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-three-boxes{
+        display: inline-block;
+        margin:auto;
+    }
+    
+    .section-three-boxes .cards{
+        width: 40rem;
+        text-align: center;
+    }
+
+    .section-three-button{
+        display: flex;
+        justify-content: center;
+    }
+    .section-three-button div{
+        margin-top: 3rem;
+        margin-right: 1rem;
+    }
+    .section-three-button div:nth-child(2){
+        margin-top: 3.5rem;
+    }
+    .section-three-boxes .cards h2{
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    .section-three-boxes .cards p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section-four{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+    .section-four-text{
+        width: 100vw;
+        margin-left: 7rem;
+    }
+    
+    .section-four-text h1{
+        font-size: 3.8rem;
+        width: 80%;
+    }
+    .section-four-text p{
+        text-align: left;
+        font-size: 1.6rem;
+        width: 80%;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+    }
+    .section-four-image{
+        margin-top: -25rem;
+        width: 100vw;
+    }
+    
+    .offer-section{
+        flex-direction: column;
+        margin-top: -50rem;
+        margin-right: 0rem;
+    }
+    .offer-section .offer-image{
+        width: 100vw;
+    }
+
+    .offer-section .offer-text{
+        width: 90vw;
+        margin-top: -30rem;
+    }
+    
+    .offer-section .offer-text h1{
+        font-size: 3.3rem;
+    }
+    .offer-section .offer-text p{
+        font-size: 1.2rem;
+        margin-bottom: 4rem;
+        text-align: right;
+        width: 80%;
+    }
+    .contact{
+        flex-direction: column;
+        margin: 0 6rem;
+        margin-top: -15rem;
+    }
+    
+    .contact .contact-form-box{
+        width: 90vw;
+    }
+    .contact .contact-form-box h2{
+        font-size: 3rem;
+    }
+    
+    .contact .contact-form-box form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .contact .contact-form-box form input {
+        width: 100%;
+        font-size: 2rem;
+        color: var(--paragraphColor);
+        padding: 1.5rem 1rem ;
+        margin-bottom: 1.7rem;
+    }
+    
+    .contact .contact-form-box form div{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+    
+    .contact .contact-form-box form div div:first-child{
+        margin-right: 2rem;
+    }
+    
+    .contact .contact-image{
+        width: 80vw;
+        margin-top: -40rem;
+    }
+
+    .footer{
+        margin: 0 6rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 7rem;
+        margin-top: -20rem;
+    }
+    .footer .footer-cards p{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .footer .footer-cards h2{
+        font-size: 2.7rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .span-box{
+        width: 10px;
+        height: 10px;
+    }
+    .span-line-big{
+        height: 2px; 
+    }
+    .span-line-small{
+        height: 2px;
+        width: 35px;
+    }
+}
